@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Killing Games: Exposing the Gaming Industry's Campaign</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-text {
+            background: -webkit-linear-gradient(#ff6b6b, #f06595);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-title {
+            border-left: 4px solid #ff6b6b;
+            padding-left: 1rem;
+        }
+        /* Style for the details/summary to make it more obvious it's expandable */
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details > summary::after {
+            content: '+';
+            float: right;
+            font-size: 1.5em;
+            font-weight: bold;
+            line-height: 1;
+            margin-top: -4px;
+        }
+        details[open] > summary::after {
+            content: '−';
+        }
+
+        /* --- PRINT STYLES --- */
+        /* These styles are ONLY applied when printing or saving as PDF */
+        @media print {
+            body {
+                font-family: 'Times New Roman', serif; /* Use a standard serif font for print */
+                background-color: #ffffff !important;
+                color: #000000 !important;
+            }
+
+            /* Hide elements that are not useful for print */
+            header, footer, .call-to-action-section {
+                display: none !important;
+            }
+
+            /* Remove background colors and shadows for clean printing */
+            .bg-gray-800, .bg-gray-800\/50, .bg-gray-900, .bg-red-900\/30, .bg-green-900\/30 {
+                background-color: transparent !important;
+                box-shadow: none !important;
+                ring-width: 0 !important;
+            }
+            
+            /* Ensure text is black */
+            .text-gray-300, .text-gray-400, .text-white, .text-red-300, .text-red-200, .text-green-300, .text-green-200 {
+                color: #000000 !important;
+            }
+
+            /* Make the gradient text black for printing */
+            .gradient-text {
+                background: none !important;
+                -webkit-text-fill-color: #000000 !important;
+            }
+            
+            /* Add a border to sections to maintain separation */
+            .bg-gray-800, .bg-gray-800\/50, .bg-red-900\/30, .bg-green-900\/30 {
+                border: 1px solid #ccc;
+                padding: 1rem;
+                margin-bottom: 1rem;
+            }
+            
+            /* Ensure links are still identifiable */
+            a {
+                color: #0000EE !important; /* Standard blue for links */
+                text-decoration: underline !important;
+            }
+            
+            /* Force the sources/documentation section to be open when printing */
+            details {
+                page-break-inside: avoid; /* Try to keep details section from splitting across pages */
+            }
+            details[open] > summary::after {
+                display: none; /* Hide the plus/minus sign in print */
+            }
+            details {
+                border: 1px solid #ccc;
+            }
+            details > summary {
+                border-bottom: 1px solid #ccc;
+            }
+            
+            /* Improve page layout */
+            main {
+                padding: 1in;
+            }
+            
+            h1, h2, h3, h4 {
+                page-break-after: avoid; /* Prevent page breaks right after a heading */
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-300 antialiased">
+
+    <!-- Header -->
+    <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50 py-4 border-b border-gray-700">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-2xl md:text-3xl font-bold text-white">
+                <span class="gradient-text">Stop Killing Games</span>
+            </h1>
+            <p class="text-gray-400 text-sm md:text-base">An Exposé on the Industry's Anti-Consumer Practices</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Introduction -->
+        <section class="text-center max-w-4xl mx-auto mb-16">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Exposing the Gaming Industry's Coordinated Campaign Against Consumer Rights</h2>
+            <p class="text-lg text-gray-400">
+                The gaming industry's opposition to the Stop Killing Games initiative reveals a coordinated campaign of misinformation built on demonstrable hypocrisy. While executives publicly champion "player-first" values, their trade organization, Video Games Europe, fights to maintain the right to destroy games that customers have purchased.
+            </p>
+        </section>
+
+        <!-- What the Movement Demands (Summary) -->
+        <section class="max-w-4xl mx-auto bg-gray-800/50 rounded-2xl p-8 mb-12 ring-1 ring-gray-700">
+            <h3 class="text-2xl font-bold text-white mb-4 section-title">The Stop Killing Games Movement</h3>
+            <p class="text-gray-400">
+                Having reached over 1 million signatures, the initiative asks for simple, reasonable guarantees: when publishers end support for online games, players should retain access to products they purchased. This means providing <strong class="text-teal-400">offline modes</strong>, <strong class="text-teal-400">server binaries</strong>, or other preservation methods—not forcing publishers to maintain servers indefinitely.
+            </p>
+        </section>
+
+        <!-- Industry Opposition -->
+        <section class="max-w-4xl mx-auto mb-16">
+            <h3 class="text-3xl font-bold text-white mb-6 section-title">A Web of Industry Control & Hypocrisy</h3>
+            <div class="space-y-8">
+                <div class="bg-gray-800 rounded-xl p-6">
+                    <h4 class="font-bold text-xl text-red-400">Video Games Europe's Opposition</h4>
+                    <p class="text-gray-400 mt-2">VGE, representing giants like EA, Ubisoft, and Microsoft, claims preservation is "prohibitively expensive" and a "security risk." Their most revealing contradiction? Arguing they can't support preservation because it would violate the "PEGI Code of Conduct"—a system they founded and control.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Executive Hypocrisy -->
+        <section class="max-w-5xl mx-auto mb-16">
+            <h3 class="text-3xl font-bold text-white mb-8 section-title">Executive Hypocrisy: "Player-First" vs. Reality</h3>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- EA -->
+                <div class="bg-gray-800 rounded-xl p-6 flex flex-col">
+                    <h4 class="font-bold text-xl text-white">EA's Andrew Wilson: The "Player-First" Deception</h4>
+                    <blockquote class="border-l-4 border-red-500 pl-4 my-4 text-gray-400 italic">"Is this good for the player?"</blockquote>
+                    <p class="text-gray-400 flex-grow">While claiming a "player-first" philosophy, EA declared live services the "foundation of our business," shut down 13 games in 2025 alone, and continues to sell broken Titanfall games. Their own user agreement clarifies players only license games, contradicting ownership marketing.</p>
+                </div>
+                <!-- Ubisoft -->
+                <div class="bg-gray-800 rounded-xl p-6 flex flex-col">
+                    <h4 class="font-bold text-xl text-white">Ubisoft's Leadership: Openly Anti-Consumer</h4>
+                    <blockquote class="border-l-4 border-blue-500 pl-4 my-4 text-gray-400 italic">"Gamers need to get comfortable not owning their games." - Philippe Tremblay</blockquote>
+                    <p class="text-gray-400 flex-grow">After shutting down The Crew, Ubisoft revoked users' licenses entirely, deleting the game from libraries. In court, they argued players "never actually owned" the game, a direct contradiction to their marketing and CEO's promotion of "actual ownership" via blockchain.</p>
+                </div>
+                <!-- Activision -->
+                <div class="bg-gray-800 rounded-xl p-6 flex flex-col">
+                    <h4 class="font-bold text-xl text-white">Activision's Bobby Kotick: Acknowledging Passion, Destroying Games</h4>
+                     <blockquote class="border-l-4 border-yellow-500 pl-4 my-4 text-gray-400 italic">Gamers would "revolt" if Call of Duty were removed.</blockquote>
+                    <p class="text-gray-400 flex-grow">Despite acknowledging player attachment, Activision shuts down games without refunds and aggressively issues cease-and-desist notices against community preservation projects, stifling any fan-led efforts.</p>
+                </div>
+                <!-- Microsoft -->
+                <div class="bg-gray-800 rounded-xl p-6 flex flex-col">
+                    <h4 class="font-bold text-xl text-white">Microsoft's Phil Spencer: Preservation Advocate Turned Opponent</h4>
+                    <blockquote class="border-l-4 border-green-500 pl-4 my-4 text-gray-400 italic">Advocated for "industry-wide game preservation."</blockquote>
+                    <p class="text-gray-400 flex-grow">Despite public support for preservation and legal emulation, Spencer oversaw massive studio closures and layoffs. As a member of VGE, Microsoft Gaming officially opposes the Stop Killing Games initiative.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Security Argument Collapse -->
+        <section class="max-w-4xl mx-auto mb-16">
+            <h3 class="text-3xl font-bold text-white mb-6 section-title">The Security Argument Collapses Under Scrutiny</h3>
+            <p class="text-gray-400 mb-6">VGE claims shutdowns protect player security. The evidence shows their own active, profitable games suffer worse security problems than community-preserved titles.</p>
+            <div class="bg-red-900/30 border border-red-700 rounded-xl p-6">
+                <h4 class="font-bold text-xl text-red-300">Active Games with Severe Unpatched Vulnerabilities</h4>
+                <ul class="list-disc list-inside mt-4 space-y-2 text-red-200">
+                    <li><strong class="text-white">Titanfall Series:</strong> Unplayable since 2018 due to DDoS/RCE exploits, yet still sold by EA.</li>
+                    <li><strong class="text-white">Apex Legends:</strong> Major tournament disrupted in 2024 by an RCE exploit injecting cheats.</li>
+                    <li><strong class="text-white">GTA Online:</strong> RCE vulnerabilities allowed hackers to delete accounts and modify stats.</li>
+                    <li><strong class="text-white">Call of Duty:</strong> A persistent, never-ending cheating epidemic.</li>
+                </ul>
+            </div>
+             <div class="bg-green-900/30 border border-green-700 rounded-xl p-6 mt-6">
+                <h4 class="font-bold text-xl text-green-300">Community Solutions Outperform Publisher Security</h4>
+                <ul class="list-disc list-inside mt-4 space-y-2 text-green-200">
+                    <li><strong class="text-white">World of Warcraft (Nostalrius):</strong> Zero major security incidents, inspired Blizzard to create WoW Classic.</li>
+                    <li><strong class="text-white">GTA V (FiveM):</strong> More secure than official online, acquired by Rockstar.</li>
+                    <li><strong class="text-white">City of Heroes:</strong> Community-run servers now officially licensed, better maintained than the original.</li>
+                    <li><strong class="text-white">Skyrim Unofficial Patches:</strong> Fixed thousands of bugs and exploits left unpatched by the publisher.</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Real Motivation & New Sections -->
+        <section class="max-w-4xl mx-auto mb-16 space-y-8">
+            <div>
+                <h3 class="text-3xl font-bold text-white mb-6 section-title">The Real Motivation: Revenue, Not Safety</h3>
+                <p class="text-gray-400">Publishers' true concerns become clear in their own statements. Video Games Europe worries about "competition from community-supported versions of games" and that preserved games would "jeopardize the financial investments of the video game companies." This is about forcing consumers to buy remasters instead of playing preserved original games.</p>
+            </div>
+             <div>
+                <h4 class="text-2xl font-bold text-white mb-4">The Pattern of Planned Obsolescence</h4>
+                <p class="text-gray-400">There is an acceleration of game shutdowns, with EA leading the destruction. In 2025 alone, EA shut down 13 games, including titles with dedicated player bases. This pattern represents deliberate planned obsolescence designed to force players toward newer titles and recurring revenue streams.</p>
+            </div>
+            <div>
+                 <h4 class="text-2xl font-bold text-white mb-4">Successful Examples Disprove Opposition Claims</h4>
+                 <p class="text-gray-400 mb-4">Despite VGE's claims that preservation is impossible, several publishers have successfully released server code and preserved games:</p>
+                 <ul class="list-disc list-inside text-gray-400 space-y-2">
+                     <li><strong class="text-white">EA's Command & Conquer:</strong> Released source code for multiple titles under GPL license, enabling community preservation at minimal cost.</li>
+                     <li><strong class="text-white">Ubisoft's World in Conflict:</strong> Released server source code after shutdown, allowing community-hosted servers.</li>
+                     <li><strong class="text-white">NCSoft's City of Heroes Licensing:</strong> Granted official licensing to community servers, keeping the game alive at virtually no cost.</li>
+                 </ul>
+            </div>
+             <div>
+                 <h4 class="text-2xl font-bold text-white mb-4">VGE's Member Companies: United in Hypocrisy</h4>
+                 <p class="text-gray-400 mb-4">The following companies, through VGE membership, officially oppose Stop Killing Games while their executives make contradictory public statements:</p>
+                 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 text-center">
+                     <div class="bg-gray-800 p-3 rounded-lg">Nintendo</div>
+                     <div class="bg-gray-800 p-3 rounded-lg">Microsoft</div>
+                     <div class="bg-gray-800 p-3 rounded-lg">Sony</div>
+                     <div class="bg-gray-800 p-3 rounded-lg">EA</div>
+                     <div class="bg-gray-800 p-3 rounded-lg">Ubisoft</div>
+                     <div class="bg-gray-800 p-3 rounded-lg">Activision Blizzard</div>
+                     <div class="bg-gray-800 p-3 rounded-lg">Take-Two</div>
+                     <div class="bg-gray-800 p-3 rounded-lg">Warner Bros Games</div>
+                     <div class="bg-gray-800 p-3 rounded-lg">Riot Games</div>
+                     <div class="bg-gray-800 p-3 rounded-lg">Sega</div>
+                 </div>
+            </div>
+        </section>
+        
+        <!-- What the movement requires -->
+        <section class="max-w-4xl mx-auto mb-16">
+            <h3 class="text-3xl font-bold text-white mb-6 section-title">What Stop Killing Games Actually Requires</h3>
+            <p class="text-gray-400 mb-6">The movement's demands are reasonable and achievable, focusing on basic consumer rights:</p>
+            <div class="bg-gray-800/50 rounded-xl p-6 ring-1 ring-gray-700">
+                <ol class="list-decimal list-inside space-y-3 text-gray-300">
+                    <li><strong class="text-white">End-of-life planning:</strong> Require companies to consider preservation during development.</li>
+                    <li><strong class="text-white">Functional offline modes:</strong> Ensure games can function without constant server connections.</li>
+                    <li><strong class="text-white">Server binaries:</strong> Provide tools for communities to host servers when official support ends.</li>
+                    <li><strong class="text-white">Legal clarity:</strong> Establish that purchased games cannot be completely destroyed.</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="my-20 call-to-action-section">
+            <div class="max-w-6xl mx-auto md:flex items-center bg-gray-800 rounded-2xl p-8 shadow-2xl">
+                <div class="md:w-1/2 md:pr-12">
+                     <h2 class="text-4xl font-extrabold text-white mb-4">Do Your Part.</h2>
+                     <p class="text-gray-400 mb-6">Support the cause and demand accountability from an industry that sells products designed to be destroyed.</p>
+                     <div class="space-y-4">
+                         <a href="https://citizens-initiative.europa.eu/initiatives/details/2024/000007_en" target="_blank" class="block w-full text-center bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105">Sign the EU Citizens' Initiative</a>
+                         <a href="https://www.stopkillinggames.com" target="_blank" class="block w-full text-center bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105">Learn More at stopkillinggames.com</a>
+                         <p class="text-xs text-gray-500 text-center">UK citizens can search for the "Prohibit publishers irrevocably disabling video games" petition on the Parliament website.</p>
+                     </div>
+                </div>
+                <div class="md:w-1/2 mt-8 md:mt-0">
+                    <img src="https://pbs.twimg.com/media/Gutw47hW8AAQQLd?format=jpg&name=900x900" alt="Stop Killing Games promotional poster" class="rounded-lg shadow-lg w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x800/111827/4b5563?text=Image+Not+Found';">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Conclusion -->
+        <section class="max-w-4xl mx-auto mb-16">
+            <h3 class="text-3xl font-bold text-white mb-6 section-title">Conclusion: The Mask Has Slipped</h3>
+            <p class="text-gray-400 space-y-4">
+                The Stop Killing Games controversy has exposed the gaming industry's true priorities. When faced with legislation that would actually benefit players, these companies revealed their real stance: profits over preservation, control over consumer rights, and corporate interests over community needs.
+                <br><br>
+                Their arguments about security are undermined by their own poor track record. Their claims about costs are laughable. The real concern is revenue protection, not player security. This movement represents our chance to demand accountability.
+            </p>
+        </section>
+
+        <!-- Sources -->
+        <section class="max-w-4xl mx-auto">
+             <details open class="bg-gray-800/50 rounded-lg">
+                <summary class="text-xl font-bold text-white p-6 cursor-pointer hover:bg-gray-700/50 rounded-t-lg">Sources and Documentation</summary>
+                <div class="p-6 border-t border-gray-700 text-sm grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+                    
+                    <div>
+                        <h4 class="font-bold text-lg mb-2 text-white">Official Documents</h4>
+                        <ul class="space-y-2 list-disc list-inside">
+                            <li><a href="https://www.stopkillinggames.com" target="_blank" class="text-blue-400 hover:underline">Stop Killing Games official website</a></li>
+                            <li><a href="https://citizens-initiative.europa.eu/initiatives/details/2024/000007_en" target="_blank" class="text-blue-400 hover:underline">EU Citizens' Initiative petition</a></li>
+                            <li><a href="https://www.videogameseurope.eu/wp-content/uploads/2025/07/VGE-Position-Discontinuation-of-Support-to-Online-Games-04072025.pdf" target="_blank" class="text-blue-400 hover:underline">Video Games Europe opposition PDF</a></li>
+                            <li><a href="https://www.videogameseurope.eu/news/statement-on-stop-killing-games/" target="_blank" class="text-blue-400 hover:underline">Video Games Europe statement</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold text-lg mb-2 text-white">Executive Statements</h4>
+                        <ul class="space-y-2 list-disc list-inside">
+                            <li><a href="https://www.nme.com/news/gaming-news/ubisoft-exec-says-gamers-should-get-comfortable-with-not-owning-games-3572308" target="_blank" class="text-blue-400 hover:underline">Ubisoft's "Don't Own Games" stance</a></li>
+                            <li><a href="https://www.gamesradar.com/games/ubisoft-says-you-cannot-complain-it-shut-down-the-crew-because-you-never-actually-owned-it-and-you-werent-deceived-b" target="_blank" class="text-blue-400 hover:underline">Ubisoft legal defense of The Crew shutdown</a></li>
+                            <li><a href="https://gameworldobserver.com/2023/11/02/electronic-arts-q2-growth-live-service-games-foundation" target="_blank" class="text-blue-400 hover:underline">EA's "Player-First" vs Live Service reality</a></li>
+                            <li><a href="https://www.windowscentral.com/phil-spencer-hopes-industry-wide-game-preservation" target="_blank" class="text-blue-400 hover:underline">Phil Spencer on game preservation (2021)</a></li>
+                            <li><a href="https://insider-gaming.com/phil-spencer-message-to-staff/" target="_blank" class="text-blue-400 hover:underline">Phil Spencer layoff memo</a></li>
+                            <li><a href="https://www.marketscreener.com/quote/stock/ACTIVISION-BLIZZARD-INC-3780631/news/Activision-CEO-says-gamers-would-revolt-if-Call-of-Duty-were-made-exclusive-44224087/" target="_blank" class="text-blue-400 hover:underline">Bobby Kotick "revolt" testimony</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold text-lg mb-2 text-white">Security Failures & Exploits</h4>
+                        <ul class="space-y-2 list-disc list-inside">
+                            <li><a href="https://savetitanfall.com/" target="_blank" class="text-blue-400 hover:underline">Save Titanfall campaign documentation</a></li>
+                            <li><a href="https://answers.ea.com/t5/Titanfall-Games/Remote-code-execution-in-Titanfall-2-client/td-p/11250397" target="_blank" class="text-blue-400 hover:underline">Titanfall 2 RCE vulnerability (EA forum)</a></li>
+                            <li><a href="https://arstechnica.com/gaming/2021/09/titanfall-2-video-game-allegedly-hacked-via-simple-exploit/" target="_blank" class="text-blue-400 hover:underline">Titanfall 2 security issues (Ars Technica)</a></li>
+                            <li><a href="https://www.pcgamer.com/there-are-one-or-two-staff-at-respawn-working-on-titanfalls-security-problems/" target="_blank" class="text-blue-400 hover:underline">PC Gamer on Titanfall server security</a></li>
+                            <li><a href="https://www.techradar.com/computing/cyber-security/apex-legends-tournament-disrupted-by-rogue-rce-exploit-hack" target="_blank" class="text-blue-400 hover:underline">Apex Legends tournament hack</a></li>
+                            <li><a href="https://www.bleepingcomputer.com/news/security/gta-online-bug-exploited-to-ban-corrupt-players-accounts/" target="_blank" class="text-blue-400 hover:underline">GTA Online RCE exploit</a></li>
+                            <li><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24059" target="_blank" class="text-blue-400 hover:underline">CVE-2023-24059 (GTA Online)</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold text-lg mb-2 text-white">Community Preservation</h4>
+                        <ul class="space-y-2 list-disc list-inside">
+                            <li><a href="https://en.wikipedia.org/wiki/Nostalrius" target="_blank" class="text-blue-400 hover:underline">Nostalrius WoW server</a></li>
+                            <li><a href="https://www.pcgamer.com/games/mmo/with-a-near-unprecedented-official-license-for-its-fan-server-one-of-pc-gamings-great-mmos-has-a-vibrant-future-let-it-be-shouted-far-and-wide-city-of-heroes-lives-again/" target="_blank" class="text-blue-400 hover:underline">City of Heroes community preservation</a></li>
+                            <li><a href="https://massivelyop.com/2024/01/04/ncsoft-has-officially-granted-a-city-of-heroes-server-license-to-the-homecoming-crew/" target="_blank" class="text-blue-400 hover:underline">City of Heroes official license</a></li>
+                            <li><a href="https://en.uesp.net/wiki/Skyrim_Mod:Unofficial_Skyrim_Patch" target="_blank" class="text-blue-400 hover:underline">Skyrim Unofficial Patch</a></li>
+                            <li><a href="https://www.gamesear.com/news/ubisoft-has-released-the-official-source-code-for-the-world-in-conflict-servers" target="_blank" class="text-blue-400 hover:underline">Ubisoft World in Conflict source release</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="md:col-span-2">
+                        <h4 class="font-bold text-lg mt-4 mb-2 text-white">Game Shutdowns & Industry Opposition</h4>
+                        <ul class="space-y-2 list-disc list-inside">
+                            <li><a href="https://www.pcgamer.com/gaming-industry/european-game-publisher-group-responds-to-stop-killing-games-claims-these-proposals-would-curtail-developer-choice/" target="_blank" class="text-blue-400 hover:underline">PC Gamer analysis of industry response</a></li>
+                            <li><a href="https://www.pcgamer.com/games/racing/ubisoft-is-stripping-peoples-licences-for-the-crew-weeks-after-its-shutdown-nearly-squandering-hopes-of-private-servers-and-acting-as-a-stark-reminder-of-how-volatile-digital-ownership-is/" target="_blank" class="text-blue-400 hover:underline">The Crew shutdown and license revocation</a></li>
+                            <li><a href="https://www.eurogamer.net/ubisoft-reportedly-revoking-the-crew-from-owners-libraries-following-server-shutdown" target="_blank" class="text-blue-400 hover:underline">Eurogamer on The Crew license revocation</a></li>
+                            <li><a href="https://www.ign.com/articles/the-crew-delisted-from-all-digital-storefronts-servers-shut-down-early-2024" target="_blank" class="text-blue-400 hover:underline">The Crew delisting announcement</a></li>
+                            <li><a href="https://gamerant.com/ea-games-shutting-down-2025-list/" target="_blank" class="text-blue-400 hover:underline">EA's 2025 game shutdowns list (Gamerant)</a></li>
+                            <li><a href="https://gamerant.com/ea-games-shutting-down-2025-fifa-23/" target="_blank" class="text-blue-400 hover:underline">FIFA 23 shutdown</a></li>
+                            <li><a href="https://timesofindia.indiatimes.com/sports/esports/news/ea-confirms-madden-nfl-22-shutdown-in-october-2025-full-list-of-ea-games-going-offline/articleshow/120830462.cms" target="_blank" class="text-blue-400 hover:underline">Madden NFL shutdowns</a></li>
+                            <li><a href="https://www.indy100.com/gaming/ea-sports-fc-fifa-nfl-madden-shutting-down" target="_blank" class="text-blue-400 hover:underline">EA games shutting down 2025 (Indy100)</a></li>
+                            <li><a href="https://www.polygon.com/2017/11/15/16656948/marvel-heroes-shuts-down-gazillion-entertainment" target="_blank" class="text-blue-400 hover:underline">Marvel Heroes shutdown (Historical)</a></li>
+                            <li><a href="https://www.polygon.com/2013/3/7/4075284/simcity-server-origin-ea-launch" target="_blank" class="text-blue-400 hover:underline">SimCity server issues (Historical)</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </details>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 mt-12">
+        <div class="container mx-auto px-6 py-6 text-center text-gray-500 text-sm">
+            <p>This document is a beautified web version of the "Stop Killing Games" PDF. All information and links are preserved from the original source.</p>
+            <p>&copy; 2025 - Information compiled by advocates for consumer rights in gaming.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
